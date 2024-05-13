@@ -99,14 +99,42 @@
         text-align: center;
         
       }
-      .card{
+      .cards{
         display: flex;
         flex-direction: row;
         width: 100%;
         justify-content: center;
-        
+        flex-grow: 1;
+        height: 400px;
+        transition-duration: 1s;
+        animation-timing-function: ease-in-out;
+
       }
-      svg{
-        height: 600px;
+
+      .card1{
+      background-color: blue;
+      height: 400px;
+      width: 200px;
+     
       }
+      .card2{
+      background-color: red;
+      height: 400px;
+      width: 200px;
+      }
+      .card3{
+      background-color: orange;
+      height: 400px;
+      width: 200px;
+      }
+      .card4{
+      background-color: aqua;
+      height: 400px;
+      width: 200px;
+      }
+
+      div:hover {
+        flex-grow: 2;
+      }
+
       
