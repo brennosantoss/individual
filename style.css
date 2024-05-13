@@ -115,22 +115,29 @@
       background-color: blue;
       height: 400px;
       width: 200px;
-     
+      transition-duration: 1s;
+      animation-timing-function: ease-in-out;
       }
       .card2{
       background-color: red;
       height: 400px;
       width: 200px;
+      transition-duration: 1s;
+      animation-timing-function: ease-in-out;
       }
       .card3{
       background-color: orange;
       height: 400px;
       width: 200px;
+      transition-duration: 1s;
+      animation-timing-function: ease-in-out;
       }
       .card4{
       background-color: aqua;
       height: 400px;
       width: 200px;
+      transition-duration: 1s;
+      animation-timing-function: ease-in-out;
       }
 
       div:hover {
