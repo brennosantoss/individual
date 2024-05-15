@@ -105,72 +105,80 @@
         width: 100%;
         justify-content: center;
         flex-grow: 1;
-        height: 400px;
+        height: 650px;
         transition-duration: 1s;
         animation-timing-function: ease-in-out;
 
       }
 
       .card1{
-      height: 400px;
+      height: 650px;
       width: 200px;
       transition-duration: 1s;
       animation-timing-function: ease-in-out;
       background-image: url("https://s2-techtudo.glbimg.com/-A4IbwbPtpkAjiKcDPIDT-iJxGU=/0x0:2400x1350/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2023/1/1/q88ar8T2WQF2YEGOkKPw/counter-strike-2-ingles.png");
-      background-size: 100%;
       background-repeat: no-repeat;
+      background-size: cover;
       }
       .card2{
-      background-image: url("https://pt.egamersworld.com/_next/image?url=https%3A%2F%2Fegamersworld.com%2Fuploads%2Fblog%2F1683218724028.jpg&w=1920&q=75");
-      height: 400px;
+      background-image: url("https://noticias.maisesports.com.br/wp-content/uploads/2022/03/VALORANT-Riot.jpg");
+      height: 650px;
       width: 200px;
       transition-duration: 1s;
       animation-timing-function: ease-in-out;
+      background-repeat: no-repeat;
+      background-size: cover;
       }
       .card3{
-      background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwiXFdXZMp2v5RmGg6n9mzoJSVhhLFAYKXTx64gROHWQ&s");
-      background-size: 100%;
-      height: 400px;
+      background-image: url("https://www.rocketleague.com/images/keyart/rl_evergreen_16x9.jpg");
+      height: 650px;
       width: 200px;
       transition-duration: 1s;
       animation-timing-function: ease-in-out;
+      background-repeat: no-repeat;
+      background-size: cover;
       }
       .card4{
-      background-color: aqua;
-      height: 400px;
+      background-image: url("https://mmorpgbr.com.br/wp-content/uploads/2022/02/league-of-legends-2022-patch-schedule-all-lol-season-12-updates-changes.jpeg");
+      height: 650px;
       width: 200px;
       transition-duration: 1s;
       animation-timing-function: ease-in-out;
+      background-repeat: no-repeat;
+      background-size: cover;
+
       }
 
       .card1:hover {
         flex-grow: 2;
-        background-size: 100%;
         background-repeat: no-repeat;
+        background-size: cover;
       }
 
       
       .card2:hover {
         flex-grow: 2;
-        background-size: 100%;
-        background-size: 100%;
         background-repeat: no-repeat;
+        background-size: cover;
+        
       }
 
       
       .card3:hover {
         flex-grow: 2;
-        background-size: 100%;
-        background-size: 100%;
         background-repeat: no-repeat;
+        background-size: cover;
       }
 
       
       .card4:hover {
         flex-grow: 2;
-        background-size: 100%;
-        background-size: 100%;
         background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom;
+        overflow: hidden;
+      
+        
       }
 
       
