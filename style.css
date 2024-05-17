@@ -3,6 +3,12 @@
         overflow-x: hidden;
         background-color: #13151B;
     }
+.mae{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding:0;
+}
 
     .nav{
         display: flex;
@@ -67,7 +73,7 @@
         top: 180%;
         width: 160%;
         height: 190%;
-        background-color: #009087;
+        background-color: #D5224E;
         border-radius: 50%;
         display: block;
         transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
@@ -76,21 +82,48 @@
       
       .button2:hover {
         color: #ffffff;
-        border: 1px solid #009087;
+        border: 1px solid #D5224E;
       }
       
       .button2:hover:before {
         top: -35%;
-        background-color: #009087;
+        background-color: #D5224E;
         transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
       }
       
       .button2:hover:after {
         top: -45%;
-        background-color: #009087;
+        background-color: #D5224E;
         transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
       }
 
+
+
+
+.inicio{
+ /* background-image: url("https://images.hdqwalls.com/wallpapers/valorant-logo-4k-2020-i3.jpg"); */
+ background-color: #13151B;
+ background-size: cover;
+ background-repeat: no-repeat;
+  height: 40vw;
+  width: 100;
+  display: flex;
+  flex-direction: row;
+}
+
+.inicio_direita{
+  height: auto;
+  width: 50%;
+
+}
+.inicio_esquerda{
+width: 50%;
+height: 100%;
+}
+.imagem_inicio{
+  height: 60vw;
+  transform: scaleX(-1);
+}
 
       .titulo{
         display: flex;
@@ -108,7 +141,14 @@
         height: 650px;
         transition-duration: 1s;
         animation-timing-function: ease-in-out;
+        position: absolute;
 
+      }
+      .sessao_jogos{
+        position: absolute;
+        background-color: #090909;
+        width: 100%;
+        height: 100%;
       }
 
       .card1{
@@ -181,4 +221,16 @@
         
       }
 
+
+      .titulo_inicio{
+        font-size: 3.7vw;
+        width: 60%;
+        text-align: center;
+        margin-left: 7vw;
+      }
       
+
+      .span_inicio{
+        font-size: 1vw;
+        
+      }
