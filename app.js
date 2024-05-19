@@ -1,6 +1,7 @@
 const express = require('express');
 const axios = require('axios');
 const path = require('path');
+const translate = require('@vitalets/google-translate-api');
 
 const app = express();
 const PORT = 3000;
@@ -18,6 +19,7 @@ app.get('/api/agents', async (req, res) => {
     }
 });
 
+
 // Endpoint para obter dados dos mapas
 app.get('/api/maps', async (req, res) => {
     try {
@@ -32,3 +34,4 @@ app.get('/api/maps', async (req, res) => {
 app.listen(PORT, () => {
     console.log(`Servidor rodando em http://localhost:${PORT}`);
 });
+

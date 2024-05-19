@@ -39,16 +39,21 @@ height: 30vw;
 .container {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+  
     
 }
 .card {
-    border: 1px solid #ccc;
+    border: 1px solid #FF4654;
     border-radius: 8px;
     margin: 16px;
     padding: 16px;
     width: 300px;
     text-align: center;
-    background-color: white;
+    background-color: #0F1722;
+    color: #F24464;
+  
 }
 .card img {
     border-radius: 8px;
@@ -62,14 +67,61 @@ height: 30vw;
 .sobre_valorant{
 width: 100%;
 height: 30vw;
-background-color: aqua;
+background-color:#FF4654;
 font-size: 1.5vw;
 display: flex;
 flex-direction: column;
 align-items: center;
+color: white;
+}
+
+.span_sobre{
+    width: 60%;
+    font-size: 1.7vw;
+    text-align: justify;
+    }
+    .agentes{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        border-bottom: #FF4654 solid 4px;
+
+    }
+    .textos_agentes{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+    }
+
+.sessao_mapas{
+ display: flex;
+ justify-content: center;
+ flex-direction: column;
+ color: #F24464;
+ width: 100%;
+ margin-left: 30%px;
+}
+
+.sessao_mapas .card{
+    width: 27%;
 }
 
 
-.sobre_valorant span{
-    width: 40%;
-    }
+.sessao_mapas h2{
+    display: flex;
+    align-items: center;
+}
+.indroducao_mapas{
+width: 100%;
+display: flex;
+justify-content: center;
+
+}
+
+.mostra_mapas{
+    display: flex;
+    width: 100%;
+    flex-direction: row-reverse;
+}
+
