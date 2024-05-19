@@ -27,6 +27,7 @@
       flex-direction: row;
       justify-content: space-between;
       width: 20%;
+      margin-top: 1%;
     }
 
     .button2 {
