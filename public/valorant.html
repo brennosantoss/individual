@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados Valorant</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/stylevalorant.css" />
+    <script>
+        async function fetchAndDisplayData(endpoint, containerId, type) {
+            try {
+                const response = await fetch(endpoint);
+                const data = await response.json();
+                const container = document.getElementById(containerId);
+
+                data.data.forEach(item => {
+                    const card = document.createElement('div');
+                    card.className = 'card';
+
+                    const img = document.createElement('img');
+                    img.src = type === 'agent' ? item.displayIcon : item.splash;
+                    img.alt = item.displayName;
+
+                    const name = document.createElement('h2');
+                    name.textContent = item.displayName;
+
+                    const description = document.createElement('p');
+                    description.textContent = type === 'agent' ? item.description : item.coordinates;
+
+                    card.appendChild(img);
+                    card.appendChild(name);
+                    // card.appendChild(description);
+
+                    // if (type === 'agent' && item.abilities) {
+                    //     const abilitiesTitle = document.createElement('h3');
+                    //     abilitiesTitle.textContent = 'Habilidades:';
+                    //     card.appendChild(abilitiesTitle);
+
+                    //     // item.abilities.forEach(ability => {
+                    //     //     const abilityDiv = document.createElement('div');
+                    //     //     abilityDiv.className = 'ability';
+
+                    //     //     const abilityName = document.createElement('strong');
+                    //     //     abilityName.textContent = ability.displayName;
+
+                    //     //     const abilityDescription = document.createElement('p');
+                    //     //     abilityDescription.textContent = ability.description;
+
+                    //     //     abilityDiv.appendChild(abilityName);
+                    //     //     abilityDiv.appendChild(abilityDescription);
+                    //     //     card.appendChild(abilityDiv);
+                    //     // });
+                    // }
+
+                    container.appendChild(card);
+                });
+            } catch (error) {
+                console.error(`Erro ao obter dados do endpoint ${endpoint}:`, error);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            fetchAndDisplayData('/api/agents', 'agents-container', 'agent');
+            fetchAndDisplayData('/api/maps', 'maps-container', 'map');
+        });
+    </script>
+</head>
+<body>
+
+    <div class="mae">
+    
+        <div class="nav">
+            <div class="options">
+                <a href="index.html" >inicio</a>
+                <a href="cs2.html" >cs2</a>
+                <a href="valorant.html">valorant</a>
+            </div>
+            <div class="entrar">
+                <button class="button2"><a href="cadastro.html" style="text-decoration: none;">Cadastre-se</a></button>
+            </div>
+        </div>
+
+        <div class="inicio_valorant">
+     <div class="inicio_direita">
+            <h1>Valorant</h1>
+        </div>
+            <div class="inicio_esquerda">
+            <img class="gif_inicio" src="assets/jet.gif">
+            </div>
+        </div>
+
+        <div class="sobre_valorant"> 
+            <h1>Sobre</h1>
+            <span>Valorant é um jogo super empolgante que mistura tiroteios intensos com habilidades especiais de personagens. Nele, você se junta a uma equipe e enfrenta outra em batalhas táticas emocionantes. Cada personagem tem suas próprias habilidades únicas, então você precisa trabalhar em equipe para aproveitar ao máximo esses poderes. Com gráficos incríveis e uma jogabilidade super envolvente, Valorant conquistou muitos fãs ao redor do mundo.</span>
+        </div>
+
+    <h1>Dados Valorant</h1>
+    <h2>Agentes</h2>
+    <div id="agents-container" class="container"></div>
+    <h2>Mapas</h2>
+    <div id="maps-container" class="container"></div>
+
+
+</div>  
+</body>
+</html>

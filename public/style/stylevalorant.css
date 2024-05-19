@@ -1,0 +1,75 @@
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    background-color: #13151B;
+  }
+
+  .mae {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .inicio_valorant{
+    width: 100%;
+    height: 30vw;
+    background-color: #EBE7E1;
+    display: flex;
+    flex-direction: row;
+}
+.inicio_direita{
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+}
+
+.inicio_direita h1 {
+    font-size: 7vw;
+
+}
+
+
+.gif_inicio{
+height: 30vw;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 16px;
+    padding: 16px;
+    width: 300px;
+    text-align: center;
+    background-color: white;
+}
+.card img {
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+}
+.ability {
+    text-align: left;
+}
+
+.sobre_valorant{
+width: 100%;
+height: 30vw;
+background-color: aqua;
+font-size: 1.5vw;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+
+.sobre_valorant span{
+    width: 40%;
+    }
