@@ -1,0 +1,240 @@
+    body {
+      margin: 0;
+      overflow-x: hidden;
+      background-color: #13151B;
+    }
+
+    .mae {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav {
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+      justify-content: space-between;
+      background-color: rgba(14, 16, 21, 1);
+      color: white;
+      width: 100%;
+      height: 3vw;
+    }
+
+    .options {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 140px;
+
+    }
+
+    .button2 {
+      display: inline-block;
+      transition: all 0.2s ease-in;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      color: #090909;
+      padding: 0.7em 1.7em;
+      cursor: pointer;
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      border-radius: 0.5em;
+    }
+
+    .button2:active {
+      color: #666;
+      box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+    }
+
+    .button2:before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%) scaleY(1) scaleX(1.25);
+      top: 100%;
+      width: 140%;
+      height: 180%;
+      background-color: rgba(0, 0, 0, 0.05);
+      border-radius: 50%;
+      display: block;
+      transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+      z-index: -1;
+    }
+
+    .button2:after {
+      content: "";
+      position: absolute;
+      left: 55%;
+      transform: translateX(-50%) scaleY(1) scaleX(1.45);
+      top: 180%;
+      width: 160%;
+      height: 190%;
+      background-color: #D5224E;
+      border-radius: 50%;
+      display: block;
+      transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+      z-index: -1;
+    }
+
+    .button2:hover {
+      color: #ffffff;
+      border: 1px solid #D5224E;
+    }
+
+    .button2:hover:before {
+      top: -35%;
+      background-color: #D5224E;
+      transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+    }
+
+    .button2:hover:after {
+      top: -45%;
+      background-color: #D5224E;
+      transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+    }
+
+
+
+
+    .inicio {
+      /* background-image: url("https://images.hdqwalls.com/wallpapers/valorant-logo-4k-2020-i3.jpg"); */
+      background-color: #13151B;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 40vw;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+    }
+
+    .inicio_direita {
+      height: auto;
+      width: 50%;
+
+    }
+
+    .inicio_esquerda {
+      width: 50%;
+      height: 100%;
+    }
+
+    .imagem_inicio {
+      height: 60vw;
+      transform: scaleX(-1);
+    }
+
+    .titulo {
+      display: flex;
+      color: white;
+      flex-direction: column;
+      text-align: center;
+
+    }
+
+    .cards {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      justify-content: center;
+      flex-grow: 1;
+      height: 43vw;
+      transition-duration: 1s;
+      animation-timing-function: ease-in-out;
+      position: absolute;
+
+    }
+
+    .sessao_jogos {
+      position: absolute;
+      background-color: #090909;
+      width: 100%;
+      height: 100%;
+    }
+
+    .card1 {
+      height: 650px;
+      width: 13%;
+      transition-duration: 1s;
+      animation-timing-function: ease-in-out;
+      background-image: url("https://s2-techtudo.glbimg.com/-A4IbwbPtpkAjiKcDPIDT-iJxGU=/0x0:2400x1350/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2023/1/1/q88ar8T2WQF2YEGOkKPw/counter-strike-2-ingles.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .card2 {
+      background-image: url("https://noticias.maisesports.com.br/wp-content/uploads/2022/03/VALORANT-Riot.jpg");
+      height: 650px;
+      width: 13%;
+      transition-duration: 1s;
+      animation-timing-function: ease-in-out;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .card3 {
+      background-image: url("https://www.rocketleague.com/images/keyart/rl_evergreen_16x9.jpg");
+      height: 650px;
+      width: 13%;
+      transition-duration: 1s;
+      animation-timing-function: ease-in-out;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .card4 {
+      background-image: url("https://mmorpgbr.com.br/wp-content/uploads/2022/02/league-of-legends-2022-patch-schedule-all-lol-season-12-updates-changes.jpeg");
+      height: 650px;
+      width: 13%;
+      transition-duration: 1s;
+      animation-timing-function: ease-in-out;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+    }
+
+    .card1:hover {
+      flex-grow: 2;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .card2:hover {
+      flex-grow: 2;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+    }
+
+    .card3:hover {
+      flex-grow: 2;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .card4:hover {
+      flex-grow: 2;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: bottom;
+      overflow: hidden;
+
+    }
+
+    .titulo_inicio {
+      font-size: 3.7vw;
+      width: 60%;
+      text-align: center;
+      margin-left: 7vw;
+      color: white;
+    }
+
+    .span_inicio {
+      font-size: 1vw;
+
+    }
