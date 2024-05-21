@@ -1,9 +1,17 @@
 
+
+@font-face {
+    font-family: Barrio;
+    src: url(../fonts/Valorant\ Font.ttf)
+  }
+
 body {
     margin: 0;
     overflow-x: hidden;
     background-color: #13151B;
+    
   }
+ 
 
   .mae {
     height: 100%;
@@ -28,7 +36,9 @@ align-items: center;
 
 .inicio_direita h1 {
     font-size: 7vw;
-
+    color: #FF4654;
+    font-family: Barrio;
+    
 }
 
 
