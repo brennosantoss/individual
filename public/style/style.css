@@ -257,14 +257,15 @@
   .sessao_nav{
     display: flex;
     flex-direction: row;
-    border: solid black;
     size: cover;
     align-items: center;
+    justify-content: center;
     height: 1.9vw;
     margin-top: -0.5vw;
     width: 100%;
-    margin-left: 10;
-    margin-top: -1.65%;
+    margin-top: -1.69%;
+    border-bottom: none;
+    border-top: none;
   }
 
   .sessao_nav_lol{
@@ -277,11 +278,16 @@
     margin-top: -0.5vw;
     width: 100%;
     margin-top: -1.69%;
+    border-bottom: none;
+    border-top: none;
+    
   }
   .sessao_nav_lol img{
     height: 1.9vw;
     margin-right: 5%;
   }
+  
+
 
   .sessao_nav img{
     height: 1.9vw;
@@ -289,9 +295,17 @@
   }
   .sessao_nav_lol:hover{
     border: solid  black ;
+    border-bottom: none;
+    border-top: none;
   }
   /* .sessao_nav img{
     justify-content: center;
     align-items: center;
     height: 2vw;
   } */
+
+  .sessao_nav:hover{
+    border: solid  black ;
+    border-bottom: none;
+    border-top: none;
+  }
