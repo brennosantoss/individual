@@ -16,11 +16,11 @@
       flex-direction: row;
       list-style: none;
       justify-content: space-between;
-      background-color: rgba(14, 16, 21, 1);
-      color: white;
+      background-color: hsla( 222deg 10% 17% / 1);
       width: 100%;
        align-items: center;
-       height: 3vw;
+       height: 2.5vw;
+       
     }
 
     .options {
@@ -155,11 +155,11 @@
       position: absolute;
       background-color: #090909;
       width: 100%;
-      height: 100%;
+      height: 50vw;
     }
 
     .card1 {
-      height: 650px;
+      height: 35vw;
       width: 13%;
       transition-duration: 1s;
       animation-timing-function: ease-in-out;
@@ -170,7 +170,7 @@
 
     .card2 {
       background-image: url("https://noticias.maisesports.com.br/wp-content/uploads/2022/03/VALORANT-Riot.jpg");
-      height: 650px;
+      height: 35vw;
       width: 13%;
       transition-duration: 1s;
       animation-timing-function: ease-in-out;
@@ -180,7 +180,7 @@
 
     .card3 {
       background-image: url("https://www.rocketleague.com/images/keyart/rl_evergreen_16x9.jpg");
-      height: 650px;
+      height: 35vw;
       width: 13%;
       transition-duration: 1s;
       animation-timing-function: ease-in-out;
@@ -190,7 +190,7 @@
 
     .card4 {
       background-image: url("https://mmorpgbr.com.br/wp-content/uploads/2022/02/league-of-legends-2022-patch-schedule-all-lol-season-12-updates-changes.jpeg");
-      height: 650px;
+      height: 35vw;
       width: 13%;
       transition-duration: 1s;
       animation-timing-function: ease-in-out;
@@ -260,7 +260,7 @@
     size: cover;
     align-items: center;
     justify-content: center;
-    height: 1.9vw;
+    height: 2.5vw;
     margin-top: -0.5vw;
     width: 100%;
     margin-top: -1.69%;
@@ -274,7 +274,7 @@
     size: cover;
     align-items: center;
     justify-content: center;
-    height: 1.9vw;
+    height: 2.5vw;
     margin-top: -0.5vw;
     width: 100%;
     margin-top: -1.69%;
@@ -294,9 +294,11 @@
     margin-right: 5%;
   }
   .sessao_nav_lol:hover{
-    border: solid  black ;
+    border: solid 0.2vh black ;
     border-bottom: none;
-    border-top: none;
+    border-top: none; 
+    background-color: #13151B;
+    background-size: cover;
   }
   /* .sessao_nav img{
     justify-content: center;
@@ -305,7 +307,12 @@
   } */
 
   .sessao_nav:hover{
-    border: solid  black ;
+    border: solid 0.2vh black ;
     border-bottom: none;
-    border-top: none;
+    border-top: none; 
+    background-color: #13151B;
+    background-size: cover;
+ 
   }
+
+  
