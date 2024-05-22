@@ -48,22 +48,20 @@ height: 30vw;
 
 .container {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     width: 100%;
+    scrollbar-width: 20px;  
   
-    
 }
 .card {
     border: 1px solid #FF4654;
     border-radius: 8px;
     margin: 16px;
     padding: 16px;
-    width: 300px;
+    width: 26%;
     text-align: center;
     background-color: #0F1722;
     color: #F24464;
-  
 }
 .card img {
     border-radius: 8px;
@@ -133,5 +131,11 @@ justify-content: center;
     display: flex;
     width: 100%;
     flex-direction: row-reverse;
+}
+
+.mostrar_agentes{
+    display: flex;
+    width: 100%;
+    align-items: center;
 }
 

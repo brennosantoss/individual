@@ -1,5 +1,7 @@
 .inicio_cs2{
-    background-image: url("https://cdn.cloudflare.steamstatic.com/apps/csgo/images/csgo_react/social/cs2.jpg");
+background-image: url("https://flowgames.gg/wp-content/uploads/2023/03/CS2.png");
 background-size: cover;
-height: auto;
+width: 100%;
+height: 30vw;
+
 }

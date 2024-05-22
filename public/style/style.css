@@ -19,7 +19,7 @@
       background-color: hsla( 222deg 10% 17% / 1);
       width: 100%;
        align-items: center;
-       height: 2.5vw;
+       height: 2%;
        
     }
 
@@ -27,7 +27,7 @@
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      width: 50%;
+      width: 60%;
       margin-top: 1%;
     }
 
@@ -260,12 +260,13 @@
     size: cover;
     align-items: center;
     justify-content: center;
-    height: 2.5vw;
+    height: 3.2vw;
     margin-top: -0.5vw;
     width: 100%;
     margin-top: -1.69%;
     border-bottom: none;
     border-top: none;
+    font-family: Arial, Helvetica, sans-serif;
   }
 
   .sessao_nav_lol{
@@ -274,12 +275,13 @@
     size: cover;
     align-items: center;
     justify-content: center;
-    height: 2.5vw;
+    height: 3.2vw;
     margin-top: -0.5vw;
     width: 100%;
     margin-top: -1.69%;
     border-bottom: none;
     border-top: none;
+    font-family: Arial, Helvetica, sans-serif;
     
   }
   .sessao_nav_lol img{
@@ -299,6 +301,7 @@
     border-top: none; 
     background-color: #13151B;
     background-size: cover;
+ 
   }
   /* .sessao_nav img{
     justify-content: center;
@@ -312,7 +315,4 @@
     border-top: none; 
     background-color: #13151B;
     background-size: cover;
- 
   }
-
-  

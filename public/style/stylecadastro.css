@@ -1,0 +1,115 @@
+.pai{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+.cadastro{
+width: 100%;
+height: 60%;
+display: flex;
+justify-content: center;
+margin-bottom: -40%;
+display: flex;
+
+}
+
+.card_cadastro{
+background-color: hsl(222 5% 15% / 1);;
+width: 30%;
+height: 38vw;
+display: flex;
+flex-direction: column;
+align-items: center;
+border-radius: 10px;
+border: solid 2px gray;
+color: white;
+font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.input_login{
+    border-radius: 8px;
+    background: none;
+    width: 75%;
+    height: 1.7vw;
+    border: solid 0.5px black;
+    background-color: hsl(222 5% 59% / 1);
+    opacity: 85%;
+}
+
+.campo_confirma{
+    width: 100%;
+  
+}
+
+.botao_cadastrar{
+width: 60%;
+height: 8%;
+margin-top: 2%;
+border-radius: 6px;
+border: solid 0.3vw white;
+animation-duration: 1s;
+font-size: 1.3vw;
+margin-bottom: 1.5vw;
+margin-left: 10%;
+}
+
+
+.span_nome{
+    opacity: 90%;
+    font-size: 1.2vw;
+    margin-bottom: -10px;
+}
+
+
+
+.span_email{
+    opacity: 90%;
+    font-size: 1.2vw;
+    margin-bottom: -10px;
+}
+
+.span_senha{
+    opacity: 90%;
+    font-size: 1.2vw;
+    margin-bottom: -10px;
+}
+
+
+.span_confirma_senha{
+    opacity: 90%;
+    font-size: 1.2vw;
+    margin-bottom: -10px;
+}
+
+
+.botao_cadastrar:hover{
+ background-color: hsla(353, 85%, 53%, 1);
+ color: white;
+ background-size: cover;
+ border-color: hsla(353, 85%, 53%, 1);
+
+}
+
+
+.possui_conta{
+    color: #D5224E;
+    margin-left: 23%;
+  }
+
+  .possui_conta:hover{
+  
+    border-bottom: solid 1px #D5224E;
+  }
+
+  .sessao_nome{
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    margin-left: 20%;
+  }
+
+
