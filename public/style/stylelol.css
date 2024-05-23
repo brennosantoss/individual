@@ -1,0 +1,20 @@
+.sessao_inicio{
+    width: 100%;
+    height: 40vw;
+    display: flex;
+    flex-direction: row;
+    background-image: url("https://img.odcdn.com.br/wp-content/uploads/2024/03/League-of-Legends.jpg");
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  
+}
+
+.sessao_inicio_direita{
+   width: 50%;
+   height: 100%;
+   background-image: url('https://logosmarcas.net/wp-content/uploads/2020/11/League-of-Legends-Logo.png');
+   background-size:80%;
+   background-repeat: no-repeat;
+ 
+}

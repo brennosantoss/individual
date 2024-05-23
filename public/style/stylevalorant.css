@@ -49,16 +49,17 @@ height: 30vw;
 .container {
     display: flex;
     align-items: center;
-    width: 100%;
-    scrollbar-width: 20px;  
-  
+    width: 90%;
+    flex-wrap: wrap;
+    margin-left: 7%;
+    
 }
 .card {
     border: 1px solid #FF4654;
     border-radius: 8px;
     margin: 16px;
     padding: 16px;
-    width: 26%;
+    width: 19%;
     text-align: center;
     background-color: #0F1722;
     color: #F24464;
@@ -138,4 +139,3 @@ justify-content: center;
     width: 100%;
     align-items: center;
 }
-
