@@ -1,7 +1,37 @@
 .inicio_cs2{
-background-image: url("https://flowgames.gg/wp-content/uploads/2023/03/CS2.png");
-background-size: cover;
+background-image: url("https://tradeit.gg/blog/wp-content/uploads/2024/02/CS2-latest-update-1.webp");
+background-size: 100%;
 width: 100%;
 height: 30vw;
+background-repeat: no-repeat;
+display: flex;
+flex-direction: row;
+}
 
+
+.imagem_cs{
+    width: 75%;
+    height: 30%;
+}
+
+.inicio_direita{
+display: flex;
+flex-direction: column;
+justify-content: center;
+
+}
+
+.sessao_sobre{
+    height: 27vw;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.texto_sobre{
+    width: 70%;
+    font-size: 1.9vw;
+    text-align: center;
 }

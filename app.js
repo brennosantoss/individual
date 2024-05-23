@@ -12,7 +12,7 @@ app.use(express.static('public'));
 // Endpoint para obter dados dos agentes
 app.get('/api/agents', async (req, res) => {
     try {
-        const response = await axios.get('https://valorant-api.com/v1/agents');
+        const response = await axios.get('https://valorant-api.com/v1/agents?language=pt-BR');
         res.json(response.data);
     } catch (error) {
         res.status(500).send('Erro ao obter dados dos agentes');
