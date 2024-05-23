@@ -30,9 +30,12 @@
 
                     card.appendChild(img);
                     card.appendChild(name);
-                    card.appendChild(description);
-                 ;
-                
+                    if (type === 'agent') {
+                        card.appendChild(description);
+                    }
+                    ;
+
+
 
                     // if (type === 'agent' && item.abilities) {
                     //     const abilitiesTitle = document.createElement('h3');
@@ -98,15 +101,17 @@
 
             <div class="sessao_nav" style=" background-color: #13151B;">
                 <img src="assets/valorantlogo.svg" style="background-color: rgb(255, 70, 84);">
-                <a href="valorant.html">valorant</a </div>
+                <a href="valorant.html">valorant</a
             </div>
+            
         </div>
+    </div>
 
 
-        
-        <div class="entrar">
-            <button class="button2"><a href="cadastro.html" style="text-decoration: none;">Cadastre-se</a></button>
-        </div>
+
+    <div class="entrar">
+        <button class="button2"><a href="cadastro.html" style="text-decoration: none;">Cadastre-se</a></button>
+    </div>
 
 
     </div>

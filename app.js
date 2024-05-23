@@ -1,7 +1,6 @@
 const express = require('express');
 const axios = require('axios');
 const path = require('path');
-// const translate = require('@vitalets/google-translate-api');
 
 const app = express();
 const PORT = 3000;
