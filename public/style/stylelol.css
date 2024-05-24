@@ -109,3 +109,10 @@ font-size: 1.6vw;
     font-size: 1.2em;
     margin: 10px 0;
 }
+
+.campeoes{
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
