@@ -91,6 +91,7 @@ app.get('/api/maps', async (req, res) => {
     }
 });
 
+<<<<<<< HEAD
 // Endpoint para obter dados das armas
 app.get('/api/weapons', async (req, res) => {
     try {
@@ -105,6 +106,9 @@ app.get('/api/weapons', async (req, res) => {
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'valorant.html'));
 });
+=======
+
+>>>>>>> 6292b1dfe2dfc85c55b03a7f91cf1faacab3849d
 
 // Iniciando o servidor
 app.listen(PORT, () => {
