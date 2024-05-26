@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style/style.css" />
     <link rel="stylesheet" href="style/stylevalorant.css" />
     <script>
-        async function fetchAndDisplayData(endpoint, containerId, type) {
+       async function fetchAndDisplayData(endpoint, containerId, type) {
             try {
                 const response = await fetch(endpoint);
                 const data = await response.json();
@@ -17,26 +17,21 @@
                 data.data.forEach(item => {
                     const card = document.createElement('div');
                     card.className = 'card';
-
+                    
                     const img = document.createElement('img');
-                    img.src = type === 'agent' ? item.displayIcon : item.splash;
+                    img.src = type === 'agent' ? item.displayIcon : (type === 'map' ? item.splash : item.displayIcon);
                     img.alt = item.displayName;
 
                     const name = document.createElement('h2');
                     name.textContent = item.displayName;
-
                     const description = document.createElement('p');
-                    description.textContent = type === 'agent' ? item.description : item.coordinates;
+                    description.textContent = type === 'agent' ? item.description : (type === 'map' ? item.coordinates : item.shopData ? `Preço: ${item.shopData.cost} créditos` : '');
 
                     card.appendChild(img);
                     card.appendChild(name);
-                    if (type === 'agent') {
-                        card.appendChild(description);
+                    if(type === 'agent'){
+                    card.appendChild(description);
                     }
-                    ;
-
-
-
                     // if (type === 'agent' && item.abilities) {
                     //     const abilitiesTitle = document.createElement('h3');
                     //     abilitiesTitle.textContent = 'Habilidades:';
@@ -46,12 +41,17 @@
                     //         const abilityDiv = document.createElement('div');
                     //         abilityDiv.className = 'ability';
 
+                    //         const abilityIcon = document.createElement('img');
+                    //         abilityIcon.src = ability.displayIcon;
+                    //         abilityIcon.alt = ability.displayName;
+
                     //         const abilityName = document.createElement('strong');
                     //         abilityName.textContent = ability.displayName;
 
                     //         const abilityDescription = document.createElement('p');
                     //         abilityDescription.textContent = ability.description;
 
+                    //         abilityDiv.appendChild(abilityIcon);
                     //         abilityDiv.appendChild(abilityName);
                     //         abilityDiv.appendChild(abilityDescription);
                     //         card.appendChild(abilityDiv);
@@ -68,6 +68,7 @@
         document.addEventListener('DOMContentLoaded', () => {
             fetchAndDisplayData('/api/agents', 'agents-container', 'agent');
             fetchAndDisplayData('/api/maps', 'maps-container', 'map');
+            fetchAndDisplayData('/api/weapons', 'weapons-container', 'weapon');
         });
     </script>
 </head>
@@ -157,6 +158,10 @@
             <div id="maps-container" class="container"></div>
         </div>
     </div>
+<div class="sessao_armas">
+
+    <div id="weapons-container" class="container"></div>
+</div>
 
     </div>
 </body>

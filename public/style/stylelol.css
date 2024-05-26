@@ -1,33 +1,43 @@
-.sessao_inicio{
+@font-face {
+    font-family: Barrio;
+    src: url(../fonts/League.otf)
+}
+
+h1 {
+    font-family: Barrio;
+    color: rgb(200, 155, 60);
+}
+
+.sessao_inicio {
     width: 100%;
     height: 40vw;
     display: flex;
     flex-direction: row;
-    background-image: linear-gradient( to top, black, transparent 100%), url("https://artcetera.art/wp-content/uploads/2023/07/historia-do-league-of-legends.jpg");
+    background-image: linear-gradient(to top, black, transparent 100%), url("https://artcetera.art/wp-content/uploads/2023/07/historia-do-league-of-legends.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     z-index: 10000;
-    
+
 }
 
-.sessao_inicio_direita{
-   width: 50%;
-   height: 100%;
-   background-image: url('https://logosmarcas.net/wp-content/uploads/2020/11/League-of-Legends-Logo.png');
-   background-size:80%;
-   background-repeat: no-repeat;
-    
+.sessao_inicio_direita {
+    width: 50%;
+    height: 100%;
+    background-image: url('https://logosmarcas.net/wp-content/uploads/2020/11/League-of-Legends-Logo.png');
+    background-size: 80%;
+    background-repeat: no-repeat;
+
 }
 
-.sobre{
-width: 100%;
-height: 30vw;
-background-color: aliceblue;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-display: flex;
+.sobre {
+    width: 100%;
+    height: 30vw;
+    background-color: aliceblue;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
 /* .video{
@@ -39,30 +49,32 @@ display: flex;
     object-position: bottom; 
 } */
 
-.sobre_descricao{
-width: 50%;
-text-align: justify;
-font-size: 1.6vw;
+.sobre_descricao {
+    width: 50%;
+    text-align: justify;
+    font-size: 1.6vw;
 }
-.mapa{
+
+.mapa {
     width: 100%;
-    height: 40vw;
+    height: 45vw;
     background-image: url("https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/4ba163aeb6249b3583ea63e21339248ac84e41f0-3840x1862.png?auto=format&fit=fill&q=80&w=1864");
-   display: flex;
-   flex-direction: row;
+    display: flex;
+    flex-direction: row;
 }
 
-
-.mapa_direita{
+.mapa_direita {
     height: 100%;
     width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    flex-direction: column;
+    color: white;
+
 }
 
-.mapa_esquerda{
+.mapa_esquerda {
     height: 100%;
     width: 55%;
     justify-content: center;
@@ -73,13 +85,15 @@ font-size: 1.6vw;
     flex-direction: column;
 }
 
-.imagem_mapa{
-    width: 100%;
+.imagem_mapa {
+    width: 77%;
+
 }
 
-.descricao_mapa{
-    font-size: 1.7vw;
+.descricao_mapa {
+    font-size: 1.8vw;
     width: 60%;
+    text-align: justify;
 }
 
 
@@ -108,4 +122,202 @@ font-size: 1.6vw;
 .champion h2 {
     font-size: 1.2em;
     margin: 10px 0;
+}
+
+.inibidores {
+    margin-top: 3vw;
+    display: flex;
+    flex-direction: row;
+    height: 7vw;
+    width: 22%;
+}
+
+.inibidor_aliado {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inibidor_inimigo {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.titulo_nexus {
+    font-size: 2.5vw;
+}
+
+
+.descricao_nexus {
+    width: 70%;
+    text-align: justify;
+    font-size: 1.2vw;
+}
+
+.rotas {
+    width: 100%;
+    height: 50vw;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.titulo_rotas {
+    font-size: 3vw;
+}
+
+
+.mostra_rotas {
+    width: 100%;
+    height: 90%;
+    background-color: rgb(10, 20, 40);
+    display: flex;
+    flex-direction: row;
+}
+
+.seleciona_rotas {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ 
+}
+
+.top {
+    height: 15%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2vw;
+    font-size: 1.3vw;
+    color: white;
+}
+
+.jungle {
+    height: 15%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2vw;
+    font-size: 1.3vw;
+    color: white;
+}
+
+.mid {
+    height: 15%;
+    width: 100%;
+  
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2vw;
+    font-size: 1.3vw;
+    color: white;
+}
+
+.bot {
+    height: 15%;
+    width: 100%;
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2vw;
+    font-size: 1.3vw;
+    color: white;
+}
+
+.sup {
+    height: 15%;
+    width: 100%;
+ 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2vw;
+    font-size: 1.3vw;
+    color: white;
+}
+
+
+.icone_lane:hover{
+    height: 80%;
+}
+
+
+.icone_jg{
+    margin-left: 1.7vw;
+}
+
+.icone_jg:hover{
+    height: 80%;
+}
+
+.explica_lanes{
+width: 80%;
+height: 100%;
+display: flex;
+flex-direction: row;
+
+}
+
+.significado_rotas{
+height: 100%;
+width: 45%;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+gap: 2vw;
+
+}
+
+
+.descricao_rotas{
+color: white;
+font-size: 1.5vw;
+text-align: justify;
+width: 90%;
+margin-bottom: 40%;
+}
+
+
+
+.mapa_lanes{
+    height: 100%;
+    width: 55%;
+    /* background-color: azure; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.imagem_rota{
+    width: 82%;
+}
+
+.explica_imagem{
+    width: 70%;
+    color: white;
+    font-size: 1.3vw;
+    text-align: justify;
 }

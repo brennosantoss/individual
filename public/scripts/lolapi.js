@@ -30,6 +30,11 @@ function displayChampions(champions) {
             <p>${champion.title}</p>
             <p><strong>Classes:</strong> ${tags}</p>
         `;
+
+        
+        if(champion.tags.indexOf('Mage') == 1){
         championsContainer.appendChild(championElement);
+        }
+
     });
 }

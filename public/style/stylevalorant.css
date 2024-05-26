@@ -94,7 +94,6 @@ color: white;
         justify-content: center;
         flex-direction: column;
         border-bottom: #FF4654 solid 4px;
-
     }
     .textos_agentes{
         display: flex;
@@ -110,6 +109,8 @@ color: white;
  color: #F24464;
  width: 100%;
  margin-left: 30%px;
+ color: #F24464;
+
 }
 
 .sessao_mapas .card{
@@ -132,10 +133,22 @@ justify-content: center;
     display: flex;
     width: 100%;
     flex-direction: row-reverse;
+    border-bottom: #FF4654 solid 4px;
 }
 
 .mostrar_agentes{
     display: flex;
     width: 100%;
     align-items: center;
+}
+
+
+.sessao_armas{
+        display: flex;
+        width: 100%;
+        flex-direction: row-reverse;
+       border-bottom: #FF4654 solid 4px;
+       flex-direction: row;
+       width: 100%;
+       align-items: self-end;
 }
