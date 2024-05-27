@@ -124,7 +124,6 @@ h1 {
     margin: 10px 0;
 }
 
-<<<<<<< HEAD
 .inibidores {
     margin-top: 3vw;
     display: flex;
@@ -321,11 +320,4 @@ margin-bottom: 40%;
     color: white;
     font-size: 1.3vw;
     text-align: justify;
-=======
-.campeoes{
-display: flex;
-align-items: center;
-justify-content: center;
-
->>>>>>> 6292b1dfe2dfc85c55b03a7f91cf1faacab3849d
 }

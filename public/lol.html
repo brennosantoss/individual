@@ -28,11 +28,7 @@
             </div>
             <div class="sessao_nav_lol" style=" background-color: #13151B;">
                 <div></div>
-<<<<<<< HEAD
                 <img src="assets/league-of-legends.svg" style="background-color: rgb(200, 155, 60);;">
-=======
-                <img src="assets/league-of-legends.svg"  style="background-color: #D5A038; border-radius: 5px;">
->>>>>>> 6292b1dfe2dfc85c55b03a7f91cf1faacab3849d
                 <a href="lol.html">League of Legends</a>
             </div>
 
@@ -75,14 +71,8 @@
         <div class="mapa_esquerda">
             <h1>Objetivo do Jogo</h1>
 
-<<<<<<< HEAD
             <span class="descricao_mapa">O Nexus é o coração das bases de ambas as equipes. Destrua o Nexus inimigo e
                 proteja o de sua equipa para ganhar o jogo</span>
-=======
-<div class="campeoes">
-    <h1>campeões do Jogo</h1>
-    <div id="champions"></div>
->>>>>>> 6292b1dfe2dfc85c55b03a7f91cf1faacab3849d
 
             <div class="inibidores">
 
@@ -102,7 +92,7 @@
         </div>
         <div class="mapa_direita" id="parte_mapa">
             <img class="imagem_mapa" src="assets/nexus_aliado.jpg" alt="">
-            <h1 class="titulo_nexus" id="tituloNexus">Inibidor Aliado</h1>
+            <h1 class="titulo_nexus" id="tituloNexus">Nexus Aliado</h1>
             <span class="descricao_nexus">O Nexus Aliado é a estrutura que você deve proteger a todo custo. Localizado
                 na sua base, ele é protegido por duas torres e gera minions para ajudar na defesa. Se o Nexus aliado for
                 destruído, sua equipe perde o jogo.</span>
@@ -199,7 +189,7 @@
 
     function inibidorAliado() {
         parte_mapa.innerHTML = `<img  class="imagem_mapa" src="assets/nexus_aliado.jpg">
-        <h1 class="titulo_nexus" id="tituloNexus">Inibidor Aliado</h1>
+        <h1 class="titulo_nexus" id="tituloNexus">Nexus Aliado</h1>
         <span class="descricao_nexus">O Nexus aliado é a estrutura que você deve proteger a todo custo. Localizado na sua base, ele é protegido por duas torres e gera minions para ajudar na defesa. Se o Nexus aliado for destruído, sua equipe perde o jogo.</span>`
         mostraInibidorInimigo.innerHTML = '<img src="assets/inibidor_inimigo.jpg" class="imagem_inibidor" onclick="inibidorInimigo()" style="opacity: 65%;">'
         mostraInibidorAliado.innerHTML = '<img src="assets/inibidor_aliado.jpg" class="imagem_inibidor" onclick="inibidorAliado()" >'
@@ -207,7 +197,7 @@
 
     function inibidorInimigo() {
         parte_mapa.innerHTML = `<img  class="imagem_mapa" src="assets/nexusInimigo.jpg">
-        <h1 class="titulo_nexus" id="tituloNexus">Inibidor Inimigo</h1>
+        <h1 class="titulo_nexus" id="tituloNexus">Nexus Inimigo</h1>
         <span class="descricao_nexus">O Nexus inimigo é a estrutura que você precisa destruir para vencer a partida. Localizado na base adversária, ele também é protegido por duas torres. Destruir o Nexus inimigo garante a vitória para sua equipe.</span>
         `
         mostraInibidorAliado.innerHTML = '<img src="assets/inibidor_aliado.jpg" class="imagem_inibidor" onclick="inibidorAliado()"  style="opacity: 65%;">'
@@ -216,157 +206,99 @@
     }
 
 
-    function rotaTop(){
-        informacoesRota.innerHTML = `<img src="assets/mapa_top.jpg" class="imagem_rota">
-                        <h1>Top Lane</h1>
-                        <span class="explica_imagem">É onde você encontra menos jogadores, então as batalhas são mais isoladas. Se você gosta de lutar com poucas pessoas, essa é a sua rota. É também onde você pode tentar empurrar a lane sozinho para ganhar vantagem.</span>`
+const imagensRotas = ['mapa_top.jpg','mapa_jg.jpg','mapa_mid.jpg','mapa_bot.jpg','mapa_sup.jpg']
+const nomeRotas = ['Top Lane','Jungler','Mid Lane','Bot Lane','Suporte']
+const listaDescreveRotas = ['É onde você encontra menos jogadores, então as batalhas são mais isoladas. Se você gosta de lutar com poucas pessoas, essa é a sua rota. É também onde você pode tentar empurrar a lane sozinho para ganhar vantagem.'
+,'A Jungle é a área selvagem entre as rotas, cheia de monstros neutros e caminhos secretos. Os jogadores que vão para a Jungle são chamados de "junglers". Eles não ficam em nenhuma rota específica, em vez disso, passam o tempo vagando pela Jungle, matando monstros e ajudando suas equipes.'
+,'A Rota do Meio é a "estrada central". É o caminho mais movimentado, porque conecta as duas bases diretamente. Aqui é onde acontecem muitas lutas, porque é perto dos objetivos mais importantes do mapa. Se você gosta de estar no meio da ação, essa é a sua rota.'
+,'O Atirador, também conhecido como botlaner, é responsável por causar dano à distância na Rota do Bot. Embora comece frágil, ele se torna uma grande ameaça com ouro e tempo. Seu objetivo é coletar recursos para ser uma força significativa nas lutas em equipe, especialmente no final do jogo'
+,'O Suporte é o herói que protege e ajuda o Atirador durante o jogo. Eles têm habilidades para curar, proteger e controlar o campo de visão no mapa. O Suporte garante que o Atirador possa fazer seu trabalho com segurança, enquanto também ajuda a equipe como um todo.']
+let listaOpacidade = [70,70,70,70,70]
 
-                                       
-         lista_rotas.innerHTML = `
-         <div class="top" onclick="rotaTop()">
-                    <img src="assets/icone_top.jpg" class="icone_lane" >
-                    <span><b>Top</b></span>
-                </div>
-                <div class="jungle" onclick="rotaJg()" >
-                    <img src="assets/icone_jungle.jpg" class="icone_jg" style="opacity:70%;">
-                    <span><b>Jungle</b></span>
-                </div>
-                <div class="mid"  onclick="rotaMid()">
-                    <img src="assets/icone_mid.jpg" class="icone_lane" style="opacity:70%;">
-                    <span><b>Mid</b></span>
-                </div>
-                <div class="bot" onclick="rotaBot()">
-                    <img src="assets/icone_bot.jpg" class="icone_lane" style="opacity:70%;">
-                    <span><b>Bot</b></span>
-                </div>
-                <div class="sup" onclick="rotaSup()">
-                    <img src="assets/icone_sup.jpg" class="icone_lane" style="opacity:70%;">
-                    <span><b>Sup</b></span>
-                </div>`
-    }
+let mudaOpacidade = 70
+   
+
+function rotaTop(){
+contaRota = 0              
+mudaOpacidade = 0
+ mudaRota()
+}
 
 
-
-    function rotaJg(){ 
-        informacoesRota.innerHTML = `<img src="assets/mapa_jg.jpg" class="imagem_rota">
-                        <h1>Jungle</h1>
-                        <span class="explica_imagem">A Jungle é a área selvagem entre as rotas, cheia de monstros neutros e caminhos secretos. Os jogadores que vão para a Jungle são chamados de "junglers". Eles não ficam em nenhuma rota específica, em vez disso, passam o tempo vagando pela Jungle, matando monstros e ajudando suas equipes.</span>`
-       
-
-         lista_rotas.innerHTML = `
-         <div class="top" onclick="rotaTop()">
-                    <img src="assets/icone_top.jpg" class="icone_lane" style="opacity:70%;">
-                    <span><b>Top</b></span>
-                </div>
-                <div class="jungle" onclick="rotaJg()" >
-                    <img src="assets/icone_jungle.jpg" class="icone_jg">
-                    <span><b>Jungle</b></span>
-                </div>
-                <div class="mid"  onclick="rotaMid()">
-                    <img src="assets/icone_mid.jpg" class="icone_lane" style="opacity:70%;">
-                    <span><b>Mid</b></span>
-                </div>
-                <div class="bot" onclick="rotaBot()">
-                    <img src="assets/icone_bot.jpg" class="icone_lane" style="opacity:70%;">
-                    <span><b>Bot</b></span>
-                </div>
-                <div class="sup" onclick="rotaSup()">
-                    <img src="assets/icone_sup.jpg" class="icone_lane" style="opacity:70%;">
-                    <span><b>Sup</b></span>
-                </div>`
+function rotaJg(){ 
+    contaRota = 1
+    mudaOpacidade = 1 
+        mudaRota()
+    
     }
 
 
 
 function rotaMid(){
-    informacoesRota.innerHTML = `<img src="assets/mapa_mid.jpg" class="imagem_rota">
-                        <h1>Mid Lane</h1>
-                        <span class="explica_imagem">A Rota do Meio é a "estrada central". É o caminho mais movimentado, porque conecta as duas bases diretamente. Aqui é onde acontecem muitas lutas, porque é perto dos objetivos mais importantes do mapa. Se você gosta de estar no meio da ação, essa é a sua rota.</span>`
-       
+    contaRota = 2
+    mudaOpacidade = 2
 
-         lista_rotas.innerHTML =`  <div class="top" onclick="rotaTop()">
-                    <img src="assets/icone_top.jpg" class="icone_lane" style="opacity:70%;">
-                    <span><b>Top</b></span>
-                </div>
-                <div class="jungle" onclick="rotaJg()" >
-                    <img src="assets/icone_jungle.jpg" class="icone_jg"  style="opacity:70%;" >
-                    <span><b>Jungle</b></span>
-                </div>
-                <div class="mid" onclick="rotaMid()">
-                    <img src="assets/icone_mid.jpg" class="icone_lane">
-                    <span><b>Mid</b></span>
-                </div>
-                <div class="bot" onclick="rotaBot()">
-                    <img src="assets/icone_bot.jpg" class="icone_lane" style="opacity:70%;">
-                    <span><b>Bot</b></span>
-                </div>
-                <div class="sup" onclick="rotaSup()">
-                    <img src="assets/icone_sup.jpg" class="icone_lane" style="opacity:70%;">
-                    <span><b>Sup</b></span>
-                </div>`
+   mudaRota()
+
 }
 
 
 
 function rotaBot(){
-    informacoesRota.innerHTML = `<img src="assets/mapa_bot.jpg" class="imagem_rota">
-                        <h1>Bot Lane</h1>
-                        <span class="explica_imagem">O Atirador, também conhecido como botlaner, é responsável por causar dano à distância na Rota do Bot. Embora comece frágil, ele se torna uma grande ameaça com ouro e tempo. Seu objetivo é coletar recursos para ser uma força significativa nas lutas em equipe, especialmente no final do jogo.</span>`
+    contaRota = 3
+    mudaOpacidade = 3
+   mudaRota()
        
 
-         lista_rotas.innerHTML =`  <div class="top" onclick="rotaTop()">
-                    <img src="assets/icone_top.jpg" class="icone_lane" style="opacity:70%;">
-                    <span><b>Top</b></span>
-                </div>
-                <div class="jungle" onclick="rotaJg()" >
-                    <img src="assets/icone_jungle.jpg" class="icone_jg"  style="opacity:70%;" >
-                    <span><b>Jungle</b></span>
-                </div>
-                <div class="mid" onclick="rotaMid()">
-                    <img src="assets/icone_mid.jpg" class="icone_lane" style="opacity:70%;">
-                    <span><b>Mid</b></span>
-                </div>
-                 <div class="bot" onclick="rotaBot()">
-                    <img src="assets/icone_bot.jpg" class="icone_lane">
-                    <span><b>Bot</b></span>
-                </div>
-                <div class="sup" onclick="rotaSup()">
-                    <img src="assets/icone_sup.jpg" class="icone_lane" style="opacity:70%;">
-                    <span><b>Sup</b></span>
-                </div>`
 }
 
 
 
 function rotaSup(){
-    informacoesRota.innerHTML = `<img src="assets/mapa_bot.jpg" class="imagem_rota">
-                        <h1>Suporte</h1>
-                        <span class="explica_imagem">O Suporte é o herói que protege e ajuda o Atirador durante o jogo. Eles têm habilidades para curar, proteger e controlar o campo de visão no mapa. O Suporte garante que o Atirador possa fazer seu trabalho com segurança, enquanto também ajuda a equipe como um todo.</span>`
-       
+    contaRota = 4
+    mudaOpacidade = 4
 
-         lista_rotas.innerHTML =`  <div class="top" onclick="rotaTop()">
-                    <img src="assets/icone_top.jpg" class="icone_lane" style="opacity:70%;">
-                    <span><b>Top</b></span>
-                </div>
-                <div class="jungle" onclick="rotaJg()" >
-                    <img src="assets/icone_jungle.jpg" class="icone_jg"  style="opacity:70%;" >
-                    <span><b>Jungle</b></span>
-                </div>
-                <div class="mid" onclick="rotaMid()">
-                    <img src="assets/icone_mid.jpg" class="icone_lane" style="opacity:70%;">
-                    <span><b>Mid</b></span>
-                </div>
-                 <div class="bot" onclick="rotaBot()">
-                    <img src="assets/icone_bot.jpg" class="icone_lane" style="opacity:70%;">
-                    <span><b>Bot</b></span>
-                </div>
-                <div class="sup" onclick = "rotaSup">
-                    <img src="assets/icone_sup.jpg" class="icone_lane" >
-                    <span><b>Sup</b></span>
-                </div>`
+    mudaRota()
+
 }
 
 
 
+
+function mudaRota(){
+
+
+    informacoesRota.innerHTML = `<img src="assets/${imagensRotas[contaRota]}" class="imagem_rota">
+                        <h1>${nomeRotas[contaRota]}</h1>
+                        <span class="explica_imagem">${listaDescreveRotas[contaRota]}</span>`
+    
+    for(let contador = 0; contador<5; contador++){
+        if(contador ==  mudaOpacidade){
+            listaOpacidade[contador] = 100
+        }else{
+            listaOpacidade[contador] = 70
+        }
+    }
+                      lista_rotas.innerHTML =`  <div class="top" onclick="rotaTop()">
+                    <img src="assets/icone_top.jpg" class="icone_lane" style="opacity:${listaOpacidade[0]}%;">
+                    <span><b>Top</b></span>
+                </div>
+                <div class="jungle" onclick="rotaJg()" >
+                    <img src="assets/icone_jungle.jpg" class="icone_jg"  style="opacity:${listaOpacidade[1]}%;" >
+                    <span><b>Jungle</b></span>
+                </div>
+                <div class="mid" onclick="rotaMid()">
+                    <img src="assets/icone_mid.jpg" class="icone_lane" style="opacity:${listaOpacidade[2]}%;">
+                    <span><b>Mid</b></span>
+                </div>
+                 <div class="bot" onclick="rotaBot()">
+                    <img src="assets/icone_bot.jpg" class="icone_lane" style="opacity:${listaOpacidade[3]}%;">
+                    <span><b>Bot</b></span>
+                </div>
+                <div class="sup" onclick ="rotaSup()">
+                    <img src="assets/icone_sup.jpg" class="icone_lane"  style="opacity:${listaOpacidade[4]}%;">
+                    <span><b>Sup</b></span>
+                </div>`
+}
 
 </script>
