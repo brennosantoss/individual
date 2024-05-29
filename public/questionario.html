@@ -7,15 +7,15 @@
     <link rel="stylesheet" href="style/style.css" />
     <link rel="stylesheet" href="style/questionario.css" />
 </head>
-<body>
+<body onload="quiz()">
         <div class="card_questionario">
-            <div class="questionario">
+            <div class="questionario" id="mostraQuiz">
                 <h1>Pergunta</h1>
-                <h2>Voce prefere blablabal </h2>
+                <h2 id="pergunta">Voce prefere blablabal </h2>
 
-           <button class="opcaoresposta">opção</button>
-           <button class="opcaoresposta">opção</button>
-           <button class="opcaoresposta">opção</button>
+           <button class="opcaoresposta" id="opcao1" onclick="pontoLol()">opção</button>
+           <button class="opcaoresposta" id="opcao2" onclick="pontoCS()">opção</button>
+           <button class="opcaoresposta" id="opcao3" onclick="pontoVAVA()">opção</button>
 
             </div>
 
@@ -25,13 +25,89 @@
 
 
 <script>
-const listaPerguntas = ['pergunta1', 'pergunta2','pergunta3']
-const listabotao1 = []
-function funcionaQuiz(){
 
-    
+const listaPerguntas = ['Qual é o seu estilo de jogo preferido?', 'Quanto tempo você está disposto a investir em uma única sessão de jogo','Qual aspecto é mais importante para você em um jogo?','Como você prefere interagir com outros jogadores','Você prefere um jogo mais realista ou com elementos fantásticos?','Qual é o seu nível de experiência em jogos de tiro?','Você prefere um jogo mais orientado para objetivos específicos ou livre para explorar?','Como você lida com a pressão e o estresse durante o jogo?']
+const listabotao1 = ['Estratégico e tático','Mais de 2 horas',' Gráficos e imersão','Trabalhando em equipe de forma coordenada','Fantástico','Avançado','Orientado para objetivos','Mantenho a calma e me concentro']
+const listabotao2 = ['Rápido e agressivo','Cerca de 1 hora','Competitividade e desafio','Competindo diretamente contra outros jogadores','Realista','Intermediário','Uma combinação dos dois','Fico nervoso, mas isso me motiva']
+const listabotao3 = ['Mistura de estratégia e ação','Menos de 30 minutos','Variedade de personagens e habilidades','Jogando em um ambiente social e cooperativo','Uma mistura de ambos',' Iniciante','Livre para explorar',' Prefiro jogar de forma mais descontraída e sem pressão']
+
+
+let perguntaAtual = 0
+
+let pontoParaLol = 0
+let pontoParaCs = 0
+let pontoParaValorant = 0
+
+
+let jogoRecomendado = 'lol'
+
+
+
+
+function quiz(){
+pergunta.innerHTML = listaPerguntas[0]
+opcao1.innerHTML = listabotao1[0]
+opcao2.innerHTML = listabotao2[0]
+opcao3.innerHTML = listabotao3[0]
 
 }
+
+function pontoLol(){
+pontoParaLol+=1
+perguntaAtual +=1
+
+mudaPergunta()
+}
+
+function pontoCS(){
+pontoParaCs+=1
+perguntaAtual +=1
+
+mudaPergunta()
+}
+
+function pontoVAVA(){
+pontoParaValorant+=1
+perguntaAtual +=1
+
+mudaPergunta()
+}
+
+
+
+
+function mudaPergunta(){
+   
+    if(perguntaAtual < 8){
+    for(let contaPergunta = 0; contaPergunta<=perguntaAtual; contaPergunta++){
+    pergunta.innerHTML = listaPerguntas[contaPergunta]
+    opcao1.innerHTML = listabotao1[contaPergunta]
+    opcao2.innerHTML = listabotao2[contaPergunta]
+    opcao3.innerHTML = listabotao3[contaPergunta]
+    }
+}else{
+    mostraQuiz.innerHTML = '<h2>Parabens Por finalizar o quiz</h2>'  
+    if(pontoParaCs>pontoParaLol && pontoParaCs>pontoParaValorant){
+jogoRecomendado = 'counter strike'
+}else if(pontoParaLol>pontoParaCs && pontoParaLol>pontoParaValorant){
+jogoRecomendado = 'league of Legends'
+}
+else{
+jogoRecomendado = 'Valorant'
+}
+
+mostraQuiz.innerHTML += `<h3> te recomendamos o jogo ${jogoRecomendado}</h3>`    
+  
+    }
+
+
+}
+
+
+
+
+
+
 
 
 </script>
