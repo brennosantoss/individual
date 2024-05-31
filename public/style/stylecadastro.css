@@ -1,3 +1,9 @@
+body{
+    background-image: url('../assets/lol_fundo-transformed.jpeg');
+   background-size: cover;
+    
+}
+
 .pai{
     display: flex;
     align-items: center;
@@ -18,7 +24,7 @@ margin-bottom: -40%;
 }
 
 .card_cadastro{
-background-color: hsl(222 5% 15% / 1);;
+background-color: hsl(222 5% 15% / 1);
 width: 30%;
 height: 38vw;
 display: flex;
@@ -94,6 +100,7 @@ margin-left: 10%;
  border-color: hsla(353, 85%, 53%, 1);
 
 }
+
 
 
 .possui_conta{

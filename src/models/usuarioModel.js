@@ -16,13 +16,14 @@ function cadastrar(nome, email, senha) {
     // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
     //  e na ordem de inserção dos dados.
     var instrucaoSql = `
-        INSERT INTO usuario (nome, email, senha) VALUES ('${nome}', '${email}', '${senha}');
+        INSERT INTO usuario (nome, email, senha, dtcadastro) VALUES ('${nome}', '${email}', '${senha}',now());
     `;
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
 }
 
+
 module.exports = {
     autenticar,
-    cadastrar
+    cadastrar,
 };

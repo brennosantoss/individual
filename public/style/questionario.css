@@ -1,6 +1,6 @@
 .card_questionario {
     width: 100%;
-    background-color: rgb(89, 212, 171);
+    background-color:#13151B;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -10,11 +10,40 @@
 
 
 .questionario{
-    height: 25vw;
-    width: 36%;
-    background-color: blueviolet;
+    color: white;
+    height: 29vw;
+    width: 30%;
+    background-color: hsl(222 5% 15% / 1);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    border-radius: 13px;
+    border: solid hsla(353, 85%, 53%, 1) 3px;
+}
+
+.opcoes{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 40%;
+    justify-content: space-evenly;
+}
+
+.opcaoresposta{
+border: none;
+height: 17%;
+border-radius: 7px;
+border: solid hsla(353, 85%, 53%, 1) 3px;
+text-align: start;
+background-color: hsl(222 5% 15% / 1);
+color: white;
+}
+
+.pergunta_atual{
+    width: 86%;
+    height: 25%;
+    border: solid hsla(353, 85%, 53%, 1) 3px;
+    border-radius: 10px;
+    text-align: center;
 }

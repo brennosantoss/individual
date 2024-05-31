@@ -35,3 +35,149 @@ justify-content: center;
     font-size: 1.9vw;
     text-align: center;
 }
+
+
+.times{
+    width: 100%;
+    height: 35vw;
+    background-color: brown;
+    display: flex;
+    flex-direction: row;
+    background-image:linear-gradient(to top, black, transparent 100%), url('../assets/fundodust2.png');
+    background-size: cover;
+    background-position: bottom;
+    overflow: hidden;
+}
+
+.contra_terrorista{
+    height: 100%;
+    width: 50%;
+    /* background-color: aquamarine; */
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    filter: brightness(70%);
+}
+
+
+
+.terrorista{
+    height: 100%;
+    width: 50%;
+    /* background-color: blanchedalmond; */
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    filter: brightness(70%);
+    
+
+}
+
+
+.imagem_time_contra{
+    margin-top: 3.7vw;
+    height: 110%;
+    background-image: url('https://convars.com/imgs/ct_patch.png');
+    background-repeat: no-repeat;
+    background-position-x: 34%;
+    background-size: 65%; 
+    margin-right: 10%;
+}
+
+.imagem_time_terrorista{
+    height: 110%;
+    background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhjKUTtXsEXtaTfsvo_T-EYj2ghOHo7FBWiIJXGnvvc76TjBvOvYptKvhiA-4gieMqitEI7GD9To_RKeEGrZzSs8NgU3NUPVMoF1NLPjlVkJFtUd5m903zmhCDjrzdNwdIexeY6l9YVd58/s1600/logo_TR_csgo.png');
+    background-repeat: no-repeat;
+    background-position-x: 13%;
+    background-size: 100%;
+    margin-top: 3.7vw;
+    margin-left: 25%;
+}
+
+/* .imagem_time_terrorista:hover{
+    height: 130%;
+    margin-top: 10vw;
+    margin-left: 32%;
+    background-image: linear-gradient(to top, white, transparent 60%), url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhjKUTtXsEXtaTfsvo_T-EYj2ghOHo7FBWiIJXGnvvc76TjBvOvYptKvhiA-4gieMqitEI7GD9To_RKeEGrZzSs8NgU3NUPVMoF1NLPjlVkJFtUd5m903zmhCDjrzdNwdIexeY6l9YVd58/s1600/logo_TR_csgo.png');
+ 
+} */
+
+/* .imagem_time_contra:hover{
+    height: 130%;
+    margin-top: 10vw;
+    background-image: linear-gradient(to top, white, transparent 60%), url('https://convars.com/imgs/ct_patch.png');
+    margin-right: 40%;
+    lighting-color: aliceblue;
+} */
+
+.times:hover{
+    background-image:linear-gradient(to top, black, transparent 300%), url('../assets/fundodust2.png');
+}
+
+
+
+
+
+.terrorista:hover .descricao_terroristas{
+    visibility: visible;
+    opacity: 1;
+    
+
+}
+
+.terrorista:hover .imagem_time_terrorista{
+    height: 130%;
+    margin-top: 10vw;
+    margin-left: 60%;
+    background-image: linear-gradient(to top, white, transparent 60%), url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhjKUTtXsEXtaTfsvo_T-EYj2ghOHo7FBWiIJXGnvvc76TjBvOvYptKvhiA-4gieMqitEI7GD9To_RKeEGrZzSs8NgU3NUPVMoF1NLPjlVkJFtUd5m903zmhCDjrzdNwdIexeY6l9YVd58/s1600/logo_TR_csgo.png');
+ 
+    
+
+}
+
+.descricao_terroristas{
+    visibility: hidden;
+    color: #fff;
+    text-align: justify;
+    position: absolute;
+    z-index: 1;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 1.7vw;
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    margin-left: 28%;
+}
+
+.descricao_contra{
+    visibility: hidden;
+    color: #fff;
+    text-align: justify;
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 1.7vw;
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+  
+}
+
+.contra_terrorista:hover .descricao_contra{
+    visibility: visible;
+    opacity: 1;
+    
+
+}
+.contra_terrorista:hover .imagem_time_contra{
+    height: 130%;
+    margin-top: 10vw;
+    margin-right: 40%;
+    background-image: linear-gradient(to top, white, transparent 60%), url('https://convars.com/imgs/ct_patch.png');
+ 
+    
+
+}
