@@ -4,7 +4,7 @@ var jogo_interessemodel = require("../models/jogo_interesseModel");
 function verJogos(req, res) {
     var idUsuario = req.params.idUsuario;
   
-    jogo_interessemodel.verJogos(idUsuario).then((resultado) => {
+    jogo_interessemodel.verjogos(idUsuario).then((resultado) => {
       if (resultado.length > 0) {
         res.status(200).json(resultado);
       } else {

@@ -8,7 +8,8 @@ CREATE TABLE usuario (
 	nome VARCHAR(50),
 	email VARCHAR(50),
 	senha VARCHAR(50),
-    dtcadastro datetime
+    dtcadastro datetime,
+    fkgrupo int
 );
 
 insert into usuario (nome,email,senha,dtcadastro) values
@@ -36,8 +37,26 @@ foreign key(fkusuario) references usuario (id),
 foreign key (fkjogo) references jogo (idjogo));
 
 
+
+create table grupo(
+idgrupo int primary key auto_increment,
+nome varchar(45),
+fkrepresentante int,
+jogo varchar(20),
+foreign key (fkrepresentante) references usuario (id));
+
+
+alter table usuario add constraint fktimerepresentado foreign key (fkgrupo) references grupo (idgrupo);
+
+
 select * from usuario;
 
 select * from jogo;
 
 select * from jogo_interesse;
+
+select * from grupo;
+
+
+
+

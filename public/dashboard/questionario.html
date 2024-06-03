@@ -84,9 +84,7 @@ function mudaPergunta(){
 }else{
     mostraQuiz.innerHTML = '<h2>Parabens Por finalizar o quiz</h2>'  
 
-
-
-
+verjogos()
 mostraQuiz.innerHTML += `<h3>Pontos para Cs${pontoParaCs}<br>Pontos para LoL${pontoParaLol}<br>Ponto para valorant ${pontoParaValorant}</h3>`    
 
 
@@ -95,6 +93,20 @@ mostraQuiz.innerHTML += `<h3>Pontos para Cs${pontoParaCs}<br>Pontos para LoL${po
 }
 
 
-
+ function verjogos() {
+    fetch("/jogos_interesse/verjogos", {
+      method: "GET",
+    })
+      .then(function (resposta) {
+        resposta.json().then((jogo_interesse) => {
+          jogo_interesse.forEach((jogo_interesse) => {
+            console.log( jogo_interesse.idinteresse)
+          });
+        });
+      })
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+      });
+  }
 
 </script>
