@@ -22,18 +22,41 @@ justify-content: center;
 }
 
 .sessao_sobre{
-    height: 27vw;
+    height: 31vw;
     background-color: aqua;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+
+}
+.video_sobre{
+    filter: brightness(20%);
+    
+}
+.titulo_sobre{
+    font-size: 3.9vw;
+    color: white;
+    position: absolute;
+    margin-bottom: 23%;
+
 }
 
+.explica_sobre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+}
 .texto_sobre{
     width: 70%;
     font-size: 1.9vw;
     text-align: center;
+    position: absolute;
+    color: white;
 }
 
 

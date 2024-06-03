@@ -1,8 +1,7 @@
 body{
-    background-image: url('../assets/chamberfundo.jpeg');
+    background-image:  url('../assets/chamberfundo.jpeg');
     background-color:  #101211;
     background-repeat: no-repeat;
-    /* background-size: 70%; */
     background-position-x: right;
     background-size: cover;
 
@@ -13,7 +12,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
 }
 
 .login{
