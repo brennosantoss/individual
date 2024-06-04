@@ -8,7 +8,7 @@ router.post("/inserirJogos", function (req, res) {
     jogo_interesseController.inserirJogos(req, res);
 })
 
-router.get("/verjogos", function (req, res) {
+router.post("/verJogos", function (req, res) {
     jogo_interesseController.verJogos(req, res);
 });
 
