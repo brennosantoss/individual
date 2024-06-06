@@ -15,7 +15,10 @@ function buscarUltimasMedidas(idAquario, limite_linhas) {
     return database.executar(instrucaoSql);
 }
 
-function buscarMedidasEmTempoReal(idAquario) {
+function buscarMedidasEmTempoReal(
+    
+    
+) {
 
     var instrucaoSql = `SELECT 
         dht11_temperatura as temperatura, 

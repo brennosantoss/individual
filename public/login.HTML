@@ -17,16 +17,12 @@
             <div class="options">
 
                 <div class="sessao_nav">
-                    <img src="assets/cs-go.svg" alt="">
+                
                     <a href="index.html">
                         <li>Home</li>
                     </a>
                 </div>
 
-                <div class="sessao_nav">
-                    <img src="assets/cs-go.svg" alt="">
-                    <li>Sobre</li>
-                </div>
                 <div class="sessao_nav_lol">
                     <div></div>
                     <img src="assets/league-of-legends.svg" alt="">
@@ -49,7 +45,7 @@
             <div class="entrar">
                 <button class="button2"><a href="cadastro.html" style="text-decoration: none;">Cadastre-se</a></button>
             </div>
-
+           
 
         </div>
 
@@ -66,7 +62,7 @@
                  
                     <span class="span_senha">senha:</span><br>
                     <input type="text" id="senha_input" class="input_login"><br>
-                  
+                    <span id="mostra_erro"></span>
                     <button class="botao_login" onclick="entrar()"> Entrar </button>
              
             </div>
@@ -79,6 +75,24 @@
 </html>
 
 <script>
+listaNiveis = []
+let tamanholista = listaNiveis.lenght
+function verniveis(){
+    var fkusuario = sessionStorage.getItem("ID_USUARIO");
+
+    console.log(fkusuario)
+    
+    return fetch(`/jogo_interesse/verniveis?fkusuario=${fkusuario}`,{
+      method: 'GET'
+    }).then(function(resposta){
+      resposta.json().then((jogo_interesse) =>{
+        jogo_interesse.forEach((jogo_interesse) =>{
+          listaNiveis.push(jogo_interesse.nivel)
+          console.log(jogo_interesse.nivel)
+        })
+      })
+    })
+  }
       function entrar() {
         // aguardar();
 
@@ -86,8 +100,7 @@
         var senhaVar = senha_input.value;
 
         if (emailVar == "" || senhaVar == "") {
-            cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            mostra_erro.innerHTML = " erro todos os campos em branco";
             finalizarAguardar();
             return false;
         }
@@ -116,17 +129,22 @@
                 resposta.json().then(json => {
                     console.log(json);
                     console.log(JSON.stringify(json));
-                    sessionStorage.EMAIL_USUARIO = json.email;
-                    sessionStorage.NOME_USUARIO = json.nome;
-                    sessionStorage.ID_USUARIO = json.id;
+                    sessionStorage.EMAIL_USUARIO = json[0].email;
+                    sessionStorage.NOME_USUARIO = json[0].nome;
+                    sessionStorage.ID_USUARIO = json[0].id;
                     sessionStorage.AQUARIOS = JSON.stringify(json.aquarios)
 
-                    setTimeout(function () {
-                        window.location = "./dashboard/questionario.html";
-                    }, 1000); // apenas para exibir o loading
+                 // apenas para exibir o loading
 
                 });
 
+                verniveis()
+               
+         
+            setTimeout(function () {
+                        window.location = "./dashboard/questionario.html";
+                    }, 1000);
+                  
             } else {
 
                 console.log("Houve um erro ao tentar realizar o login!");

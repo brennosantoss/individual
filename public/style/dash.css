@@ -1,25 +1,54 @@
-
+body{
+    background-image: linear-gradient(to right, black, transparent 170%), url('https://i.pinimg.com/originals/6f/93/50/6f93508f78319faf2a9929632b3fc041.jpg');
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
 .mae{
     height: 100%;
     width: 100%;
+
 }
 .dashbord{
-background-color: blue;
 width: 100%;
-height: 51.5vw;
+height: 100%;
+
+}.titulo_ranking{
+    font-size: 3.5vw;
+    color: white;
+}
+
+.titulo_div{
+    font-size: 3.5vw;
 
 }
 
-nav{
-    height: 4vw;
+.div_nome{
+width: 50%;
+color: white;
+}
+
+.div_sair{
+    width: 50%;
+    display: flex;
+    justify-content: end;
+    height: 100%;
+}
+
+.nav_dash{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-between;
+    background-color: hsla( 222deg 10% 17% / 1);
     width: 100%;
-    background-color: azure;
+    align-items: center;
+    height: 3vw;
 }
 
  .corpo{
-    background-color: lawngreen;
-    width: 65%;
-     height: 60vw;
+    width: 100%;
+     height: 100%;
      display: flex;
      justify-content: center;
      flex-direction: column;
@@ -27,9 +56,11 @@ nav{
     }
 
     .grafico{
-        height: 80%;
-        width: 100%;
-        background-color: gray;
+        height: 90%;
+        width: 50%;
+        background-color:hsla( 222deg 10% 17% / 1);;
+        border: solid 2px gray;
+        opacity: 80%;
     }
 
 

@@ -1,35 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./../style/style.css" />
-    <link rel="stylesheet" href="./../style/dash.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./../style/style.css" />
+  <link rel="stylesheet" href="./../style/dash.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <title>Dashbord</title>
+  <title>Dashbord</title>
 </head>
-<body>
 
-    <div class="mae">
+<body onload="chamarFuncoes()">
+
+  <div class="mae">
+
+    <div class="dashbord">
+      <div class="nav_dash">
         
-        <div class="dashbord" >
-            <nav>
-
-            </nav>
-            <div class="corpo">
-                <h1>ranking</h1>
-                <div class="grafico">
-
-                </div>
-
-            </div>
-
+          <div class="div_nome">
+            <span id="mostra_nome"></span>
+          </div>
+          <div class="div_sair">
+            <button class="button2" onclick="sair()">Sair</button>
+          </div>
+       
+      </div>
+      <div class="corpo">
+        <div class="titulo_div">
+          <h1 class="titulo_ranking">Resultado da compatibilidade</h1>
+        </div>
+        <div class="grafico">
+          <canvas id="myChart"></canvas>
         </div>
 
-
-
+      </div>
 
     </div>
-    
+
+
+
+
+  </div>
+
 </body>
+
 </html>
+
+<script>
+listaNiveis = []
+
+
+
+
+  // new Chart(ctx, {
+  //   type: 'bar',
+  //   data: {
+  //     labels: ['Red', 'Blue', 'Yellow'],
+  //     datasets: [{
+  //       label: '# of Votes',
+  //       data: [12, 19, 5],
+  //       borderWidth: 1,
+  //       borderColor: 'hsla(353, 85%, 53%, 1)',
+  //       backgroundColor: 'hsla(353, 85%, 53%, 1)'
+  //     }]
+  //   },
+  //   options: {
+  //     scales: {
+  //       y: {
+  //         beginAtZero: true
+  //       }
+  //     }
+  //   }
+  // });
+
+
+function chamarFuncoes(){
+  verniveis().then(constroiGrafico)
+  .catch(error => console.error(error));
+}
+
+  function mostranome() {
+    mostra_nome.innerHTML = `Olá ${sessionStorage.getItem("NOME_USUARIO")}`
+  }
+
+  function sair() {
+    window.location = "../index.html";
+  }
+
+  function verniveis(){
+    var fkusuario = sessionStorage.getItem("ID_USUARIO");
+
+    console.log(fkusuario)
+    
+    return fetch(`/jogo_interesse/verniveis?fkusuario=${fkusuario}`,{
+      method: 'GET'
+    }).then(function(resposta){
+      resposta.json().then((jogo_interesse) =>{
+        jogo_interesse.forEach((jogo_interesse) =>{
+          listaNiveis.push(jogo_interesse.nivel)
+          console.log(jogo_interesse.nivel)
+        })
+      })
+    })
+  }
+
+
+  function constroiGrafico(){
+    const ctx = document.getElementById('myChart');
+    new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Counter Strike','League of Legends','Valorant'],
+      datasets: [{
+        label: 'Nivel de Compatibilidade',
+        data: listaNiveis,
+        borderWidth: 1,
+        borderColor: 'hsla(353, 85%, 53%, 1)',
+        backgroundColor: 'hsla(353, 85%, 53%, 1)'
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+
+  }
+      
+</script>

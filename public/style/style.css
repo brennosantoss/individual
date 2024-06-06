@@ -1,7 +1,22 @@
-    body {
+
+
+.bangers-regular {
+  font-family: "Bangers", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+h1{
+  font-family: 'Bangers';
+}
+   
+   span{
+    font-family: sans-serif;
+   }
+   body {
       margin: 0;
       overflow-x: hidden;
       background-color: #13151B;
+      
     }
 
     .mae {
@@ -11,18 +26,18 @@
       padding: 0;
     }
 
-    .nav {
+    .nav{
       display: flex;
       flex-direction: row;
       list-style: none;
       justify-content: space-between;
-      background-color: hsla( 222deg 10% 17% / 1);
+      background-color: #272a30;
       width: 100%;
        align-items: center;
        height: 2%;
-       
     }
 
+   
     .options {
       display: flex;
       flex-direction: row;
@@ -34,7 +49,7 @@
   background-color: hsla(353, 85%, 53%, 1);
   color: white;
   background-size: cover;
-  border-color: hsla(353, 85%, 53%, 1);
+  border-color: #ed2139;
     width: 13vw;
     margin-right: 2vw;
     height: 2.3vw;
@@ -187,7 +202,9 @@
     }
 
     .span_inicio {
-      font-size: 1vw;
+      font-size: 1.3vw;
+      color: white;
+      text-align: center;
 
     }
 
@@ -275,7 +292,87 @@ height: 30vw;
 display: flex;
 flex-direction: row;
 align-items: center;
-background-color: aquamarine;
+background-image: url('https://www.gazduirejocuri.ro/gameimg/51/xbanner.jpg.pagespeed.ic.g7R34rrzlV.jpg') ;
 flex-direction: column;
+color: white;
+background-size: cover;
 }
 
+.titulo_times{
+  height: 3vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5vw;
+  color: white;
+}
+
+.botao_quiz{
+  height: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.descubra{
+  font-size: 4vw;
+}
+
+.texto_questionario{
+font-size: 2vw;
+}
+
+.desenvolvimento{
+  width: 100%;
+  height: 30vw;
+  display: flex;
+  flex-direction: row;
+}
+
+.desenvolvimento_direita{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  color: white;
+}
+
+
+.desenvolvimento_esquerda{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.titulo_objetivo{
+  display: flex;
+  align-items: center;
+  background-color:#13151B;
+  justify-content: center;
+  color: white;
+}
+
+
+
+.texto_desenvolvimento{
+font-size: 1.5vw;
+color: white;
+width: 40%;
+text-align: center;
+margin-left: 5%;
+margin-right: 5%;
+}
+
+.imagem_desenvolvimento{
+  height: 80%;
+}
+
+.texto_porque{
+font-size:1.9vw;
+width: 90%;
+}

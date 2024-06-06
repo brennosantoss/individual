@@ -17,15 +17,10 @@
             <div class="options">
 
                 <div class="sessao_nav">
-                    <img src="assets/cs-go.svg" alt="">
+            
                     <a href="index.html">
                         <li>Home</li>
                     </a>
-                </div>
-
-                <div class="sessao_nav">
-                    <img src="assets/cs-go.svg" alt="">
-                    <li>Sobre</li>
                 </div>
                 <div class="sessao_nav_lol">
                     <div></div>
@@ -57,6 +52,10 @@
         
         </div>
         <div class="pai">
+
+          <!-- <div class="mensagem_cadastro" id="cardErro">
+              <h1 id="mensagem_erro"></h1>
+          </div> -->
             <div class="cadastro">
                     
                     <div class="card_cadastro">
@@ -112,12 +111,12 @@ function cadastrar() {
     ) {
       cardErro.style.display = "block";
       mensagem_erro.innerHTML =
-        "(Mensagem de erro para todos os campos em branco)";
+        "preencha os campos";
 
     //   finalizarAguardar();
       return false;
     } else {
-      // setInterval(sumirMensagem, 5000);
+      setInterval(sumirMensagem, 5000);
     }
 
     // Enviando o valor da nova input
@@ -178,9 +177,9 @@ function cadastrar() {
   //     });
   // }
 
-//   function sumirMensagem() {
-//     cardErro.style.display = "none";
-//   }
+  function sumirMensagem() {
+    cardErro.style.display = "none";
+  }
 
 
 </script>

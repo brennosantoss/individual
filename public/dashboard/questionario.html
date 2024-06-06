@@ -85,15 +85,214 @@ function mudaPergunta(){
     mostraQuiz.innerHTML = '<h2>Parabens Por finalizar o quiz</h2>'  
 
 
-
-
 mostraQuiz.innerHTML += `<h3>Pontos para Cs${pontoParaCs}<br>Pontos para LoL${pontoParaLol}<br>Ponto para valorant ${pontoParaValorant}</h3>`    
 
+inserirjogos()
+inserirpontosValorant()
+inserirpontoslol()
 
+window.location = "dash.html";
     }
 
 }
 
+
+function inserirjogos() {
+
+//Recupere o valor da nova input pelo nome do id
+// Agora vá para o método fetch logo abaixo
+var nivelVar = pontoParaCs;
+var idVar = sessionStorage.getItem("ID_USUARIO");
+
+console.log(idVar)
+// Enviando o valor da nova input
+fetch("/jogo_interesse/inserirjogos", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({
+    // crie um atributo que recebe o valor recuperado aqui
+    // Agora vá para o arquivo routes/usuario.js
+    nivelServer: nivelVar,
+    idServer: idVar
+    // empresaServer: empresaVar
+  }),
+})
+  .then(function (resposta) {
+    console.log("resposta: ", resposta);
+    if (true) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+                    sessionStorage.pontosLOL = json[0].nivelServer;
+
+                    setTimeout(function () {
+                        window.location = "./dashboard/questionario.html";
+                    }, 1000); // apenas para exibir o loading
+
+                });
+
+            } 
+    if (resposta.ok) {
+      cardErro.style.display = "block";
+
+      mensagem_erro.innerHTML =
+        "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+      setTimeout(() => {
+        window.location = "login.html";
+      }, "2000");
+
+      limparFormulario();
+    //   finalizarAguardar();
+    } else {
+      throw "Houve um erro ao tentar realizar o cadastro!";
+    }
+  })
+  .catch(function (resposta) {
+    console.log(`#ERRO: ${resposta}`);
+    // finalizarAguardar();
+  });
+
+return false;
+}
+ function verjogos() {
+    fetch("/jogo_interesse/verjogos", {
+      method: "GET",
+    })
+      .then(function (resposta) {
+        resposta.json().then((jogo_interesse) => {
+          jogo_interesse.forEach((jogo_interesse) => {
+            console.log( jogo_interesse.idinteresse)
+          });
+        });
+      })
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+      });
+  }
+  
+
+
+  function inserirpontosValorant() {
+
+//Recupere o valor da nova input pelo nome do id
+// Agora vá para o método fetch logo abaixo
+var nivelVar = pontoParaValorant;
+var idVar = sessionStorage.getItem("ID_USUARIO");
+
+// console.log(ID_USUARIO)
+// Enviando o valor da nova input
+fetch("/jogo_interesse/inserirpontosValorant", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({
+    // crie um atributo que recebe o valor recuperado aqui
+    // Agora vá para o arquivo routes/usuario.js
+    nivelvalorantServer: nivelVar,
+    idServer: idVar
+    // empresaServer: empresaVar
+  }),
+})
+  .then(function (resposta) {
+    console.log("resposta: ", resposta);
+
+    if (resposta.ok) {
+      cardErro.style.display = "block";
+
+      mensagem_erro.innerHTML =
+        "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+      setTimeout(() => {
+        window.location = "login.html";
+      }, "2000");
+
+      limparFormulario();
+    //   finalizarAguardar();
+    } else {
+      throw "Houve um erro ao tentar realizar o cadastro!";
+    }
+  })
+  .catch(function (resposta) {
+    console.log(`#ERRO: ${resposta}`);
+    // finalizarAguardar();
+  });
+
+return false;
+}
+
+
+
+function inserirpontoslol() {
+
+//Recupere o valor da nova input pelo nome do id
+// Agora vá para o método fetch logo abaixo
+var nivelVar = pontoParaLol;
+var idVar = sessionStorage.getItem("ID_USUARIO");
+
+// console.log(ID_USUARIO)
+// Enviando o valor da nova input
+fetch("/jogo_interesse/inserirpontoslol", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({
+    // crie um atributo que recebe o valor recuperado aqui
+    // Agora vá para o arquivo routes/usuario.js
+    nivellolServer: nivelVar,
+    idServer: idVar
+    // empresaServer: empresaVar
+  }),
+})
+  .then(function (resposta) {
+    console.log("resposta: ", resposta);
+
+    if (resposta.ok) {
+      cardErro.style.display = "block";
+
+      mensagem_erro.innerHTML =
+        "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+      setTimeout(() => {
+        window.location = "login.html";
+      }, "2000");
+
+      limparFormulario();
+    //   finalizarAguardar();
+    } else {
+      throw "Houve um erro ao tentar realizar o cadastro!";
+    }
+  })
+  .catch(function (resposta) {
+    console.log(`#ERRO: ${resposta}`);
+    // finalizarAguardar();
+  });
+
+return false;
+}
+
+
+ function verjogos() {
+    fetch("/jogo_interesse/verjogos", {
+      method: "GET",
+    })
+      .then(function (resposta) {
+        resposta.json().then((jogo_interesse) => {
+          jogo_interesse.forEach((jogo_interesse) => {
+            console.log( jogo_interesse.idinteresse)
+          });
+        });
+      })
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+      });
+  }
 
 
 
