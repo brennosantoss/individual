@@ -76,8 +76,10 @@
                  
                     <button class="botao_cadastrar" onclick="cadastrar()"> cadastrar </button>
                     <a href="login.HTML"><span class="possui_conta">Já possui conta?</span></a>
-              
-                </div>
+                    <div class="div_resposta">
+                      <span class="resposta_cadastro" id="resposta"></span>
+                      </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -102,6 +104,7 @@ function cadastrar() {
     var senhaVar = senha_input.value;
     var confirmacaoSenhaVar = confirmacao_senha_input.value;
     // var empresaVar = listaEmpresas.value
+    var tamanhosenha = senhaVar.length
     if (
       nomeVar == "" ||
       emailVar == "" ||
@@ -109,16 +112,38 @@ function cadastrar() {
       confirmacaoSenhaVar == "" 
       // empresaVar == ""
     ) {
-      cardErro.style.display = "block";
-      mensagem_erro.innerHTML =
+      
+      resposta.innerHTML =
         "preencha os campos";
 
     //   finalizarAguardar();
       return false;
-    } else {
+    } else if (emailVar.indexOf('@') < 1) {
+      
+      resposta.innerHTML =
+        "o email deve conter @";
+
+    //   finalizarAguardar();
+      return false;
+    } else if (tamanhosenha < 5) {
+      
+      resposta.innerHTML =
+        "A senha deve conter pelo menos 6 varacteres"
+
+    //   finalizarAguardar();
+      return false;
+    }else if (senhaVar != confirmacaoSenhaVar) {
+      
+      resposta.innerHTML =
+        "A SENHA DE CONFIRMAÇÃO É DIFERENTE DA SENHA INFORMADA"
+
+    //   finalizarAguardar();
+      return false;
+    }else {
       setInterval(sumirMensagem, 5000);
     }
-
+    resposta.innerHTML =
+        "Usuario cadastrado com sucesso"
     // Enviando o valor da nova input
     fetch("/usuarios/cadastrar", {
       method: "POST",
@@ -138,16 +163,16 @@ function cadastrar() {
         console.log("resposta: ", resposta);
 
         if (resposta.ok) {
-          cardErro.style.display = "block";
+      
 
-          mensagem_erro.innerHTML =
+          resposta.innerHTML =
             "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
 
           setTimeout(() => {
-            window.location = "login.html";
+            window.location = "login.HTML";
           }, "2000");
 
-          limparFormulario();
+          // limparFormulario();
         //   finalizarAguardar();
         } else {
           throw "Houve um erro ao tentar realizar o cadastro!";
